@@ -2,7 +2,7 @@
 # PROJET IN200N
 DATE: 09/05/2022
 
-sujet: 
+sujet: PUISSANCE 4
 
 interfaces: GITHUB, VISUAL STUDIO CODE, PYTHON.
 
