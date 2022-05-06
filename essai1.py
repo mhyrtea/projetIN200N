@@ -7,7 +7,6 @@
 ######################
 from tkinter import *
 import tkinter as tk
-from xml.dom import NoModificationAllowedErr
 
 #création de l'objet
 racine = tk.Tk()
