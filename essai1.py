@@ -5,22 +5,34 @@
 #SALIC Awena
 #https://github.com/uvsq22101985/projetIN200N
 ######################
-
+from tkinter import *
 import tkinter as tk
-from turtle import width
+from xml.dom import NoModificationAllowedErr
 
 #création de l'objet
-fenetre = tk.Tk()
-fenetre.title("Puissance 4")
+racine = tk.Tk()
+racine.title("Puissance 4")
 
  #définition de la taille
-height = 500
-width = 500
+hauteur = 500
+largeur = 500
 
 #taille minimum et maximum
-fenetre.minsize(700, 700)
-fenetre.maxsize(1000, 1000)
+racine.minsize(700, 700)
+racine.maxsize(1000, 1000)
 
-fenetre.mainloop()
+racine.iconbitmap(r'C:\Users\novan\Pictures\cat.ico')
 
+#widgets labels 
+label1 = tk.Label(racine, text="Bienvenue:", font =("sitka","20"), bg= "sandy brown")
+label2 = tk.Label(racine, text="sur Puissance 4!",font = "sitka", bg = "bisque")
+label1.grid(column=1, row=10, padx=400)
+label2.grid(column=1, row=11, pady=1)
+
+canvas = tk.Canvas(racine, bg="ivory", height=700, width=700)
+canvas.grid(column=1, row=0)
+
+
+
+racine.mainloop()
 
