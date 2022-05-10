@@ -33,13 +33,15 @@ def get_button(b):
     global gagne
     global lst
 
-    if gagne: return
+    if gagne: 
+        return
     joueur = player_turn
     x = b-1
     y = playable_grid(player_colour, x, grille)
     # pas la peine de tester les alignements si il y a moins de 7 jetons dans la grille
     changement_joueur()
-    if len(lst) < 7: return
+    if len(lst) < 7: 
+        return
 
     gagne = test_alignement (x, y)
     if gagne:
@@ -117,7 +119,8 @@ def annuler_coup():
     global gagne
     lst_lue = []
     taille = len (lst)
-    if taille == 0: return
+    if taille == 0: 
+        return
     ligne = lst[len(lst) - 1]
     lst_lue = ligne.split(",")
     x = int(lst_lue[1])
@@ -141,14 +144,16 @@ def load():
     lst_lue = []
     # Affiche la fenêtre pour sélectionner le fichier
     filename = fd.askopenfile(filetypes=filetypes)
-    if filename is None: return               # Pas de fichier choisi
+    if filename is None: 
+        return               # Pas de fichier choisi
     f = open (filename.name, "r")
     first_line = True
     last_line = False
     for line in f:
         if first_line:
             # Si le fichier ne commence pas par Fichier Puissance 4, ce n'est pas une sauvegarde. Fait pour éviter de charger n'importe quel fichier
-            if line != "Fichier Puissance 4\n": return
+            if line != "Fichier Puissance 4\n": 
+                return
             first_line = False
             canvas.delete("all")
             set_grid (grille)
@@ -187,7 +192,8 @@ def save():
     filetypes = (('Fichier texte', '*.txt'), ('Tous les fichiers', '*.*'))
     # Affiche la fenêtre pour sélectionner le fichier
     filename = fd.asksaveasfilename(filetypes=filetypes)
-    if filename == "" or filename is None: return               # Pas de fichier choisi
+    if filename == "" or filename is None: 
+        return               # Pas de fichier choisi
     f = open (filename, "w")
     f.write("Fichier Puissance 4\n")
     for i in range (len (lst)):
