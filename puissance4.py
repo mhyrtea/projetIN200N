@@ -137,10 +137,7 @@ def load():
     global lst
     x = 0
     y = 0
-    filetypes = (
-        ('Fichier texte', '*.txt'),
-        ('Tous les fichiers', '*.*')
-    )
+    filetypes = (('Fichier texte', '*.txt'), ('Tous les fichiers', '*.*'))
     lst_lue = []
     # Affiche la fenêtre pour sélectionner le fichier
     filename = fd.askopenfile(filetypes=filetypes)
@@ -187,10 +184,7 @@ def save():
     global gagne
     global lst
 
-    filetypes = (
-        ('Fichier texte', '*.txt'),
-        ('Tous les fichiers', '*.*')
-    )
+    filetypes = (('Fichier texte', '*.txt'), ('Tous les fichiers', '*.*'))
     # Affiche la fenêtre pour sélectionner le fichier
     filename = fd.asksaveasfilename(filetypes=filetypes)
     if filename == "" or filename is None: return               # Pas de fichier choisi
